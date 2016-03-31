@@ -1,0 +1,30 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quantity": {
+      "type": "number",
+      "required": true,
+      "default": "1"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userid"
+    },
+    "product": {
+      "type": "belongsTo",
+      "model": "product",
+      "foreignKey": "productid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
